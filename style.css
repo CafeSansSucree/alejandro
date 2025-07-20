@@ -1,25 +1,38 @@
+/* Fondo general y texto */
 body {
-  body {
-  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-  background-color: #555; /* color de fondo por si no carga */
-  color: white;
-  font-family: sans-serif;
-  background-size: cover;
+  background-color: #1e1e1e; /* gris oscuro elegante */
+  color: #e5e5e5; /* texto gris claro */
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.6;
 }
 
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.02); /* capa semi transparente */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
+/* Títulos */
 h1 {
-  color: #38bdf8;
+  color: #ffffff;
   font-size: 2.5rem;
+  margin-bottom: 0.5em;
 }
 
 h2 {
-  color: #22d3ee;
-  margin-top: 2rem;
-  font-size: 1.8rem;
+  color: #cccccc;
+  font-size: 1.5rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 
+/* Listas */
 ul {
   padding-left: 1.5rem;
 }
@@ -28,16 +41,33 @@ li {
   margin-bottom: 0.5rem;
 }
 
+/* Enlaces */
 a {
-  color: #60a5fa;
+  color: #4dabf7;
   text-decoration: none;
+  transition: 0.3s ease;
 }
 
 a:hover {
+  color: #91caff;
   text-decoration: underline;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
+/* Línea divisoria sutil */
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 2em 0;
+}
+
+/* Opcional: imagen de fondo tenue */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('fondo-gris.jpg'); /* cambia esto si usas otra imagen */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1; /* transparencia sutil */
+  z-index: -1;
 }
